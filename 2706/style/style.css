@@ -1,0 +1,17 @@
+body
+{
+    background-color: rgb(226, 180, 159);
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1
+{
+    color: red;
+    font-size: 50px;
+}
+
+h1:hover
+{
+    color: rgb(201, 18, 18);
+}
