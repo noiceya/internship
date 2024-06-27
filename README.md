@@ -127,7 +127,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - b.kinga@interia.pl
+E-MAIL: b.kinga@interia.pl
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/noiceya/internship)
 
