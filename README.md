@@ -61,7 +61,7 @@
       <p>Projects created during an internship in Spain.</p>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-        HTML, CSS
+        <p> HTML, CSS </p>
       </ul>
     </li>
     <li>
