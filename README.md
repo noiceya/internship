@@ -87,8 +87,8 @@ Projects created during an internship in Spain.
 
 ### Built With
 
-* HTML
-* CSS
+- [![HTML](https://img.shields.io/badge/HTML-AAA333?style=for-the-badge&logo=html&logoColor=white)]()
+- [![CSS](https://img.shields.io/badge/CSS-348ceb?style=for-the-badge&logo=css&logoColor=white)]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
