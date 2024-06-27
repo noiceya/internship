@@ -61,7 +61,7 @@
       <p>Projects created during an internship in Spain.</p>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-        <p>HTML, CSS</p>
+        HTML, CSS
       </ul>
     </li>
     <li>
@@ -73,7 +73,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
