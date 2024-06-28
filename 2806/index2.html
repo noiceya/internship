@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <script>
+                dataTable = [];
+                
+        var input = document.getElementById("data");
+        input.addEventListener("keypress", function(event) 
+        {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("submit").click();
+            }
+        });
+
+        function addFunc(event) 
+        {
+            event.preventDefault();
+            val = document.getElementById('data').value;
+            dataTable.push(val);
+            show();
+        }
+
+        function show()
+        {
+            const dataList  = document.getElementById('dataList');
+            dataList.innerHTML = dataTable.map(i => `<li>${i}</li>`).join('');
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="data" name="data">
+        <button id="submit" name="submit" value="add" onclick="addFunc(event)"></button>
+    </form>
+
+    <section>
+        <ul id = "dataList">
+
+        </ul>
+    </section>
+</body>
+</html>
