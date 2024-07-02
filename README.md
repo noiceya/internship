@@ -59,7 +59,7 @@
       <p>Projects created during an internship in Spain.</p>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-        <p> HTML, CSS </p>
+        <p> HTML, CSS, nodeJS </p>
       </ul>
     </li>
     <li>
@@ -89,6 +89,7 @@ Projects created during an internship in Spain.
 
 - [![HTML](https://img.shields.io/badge/HTML-AAA333?style=for-the-badge&logo=html&logoColor=white)]()
 - [![CSS](https://img.shields.io/badge/CSS-348ceb?style=for-the-badge&logo=css&logoColor=white)]()
+- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
