@@ -25,6 +25,12 @@
                 addFunc();
             });
 
+            document.getElementById("delete").addEventListener("click", function(event) 
+            {
+                event.preventDefault();
+                deleteSelected();
+            });
+
             function addFunc() 
             {
                 let val = document.getElementById('data').value;
@@ -41,25 +47,76 @@
                 const dataList  = document.getElementById('dataList');
                 dataList.innerHTML = dataTable.map(i => `<li><input type="checkbox" value="${i}"> ${i}</li>`).join('');
             }
+
+            function deleteSelected() 
+            {
+                const checkboxes = document.querySelectorAll('#dataList input[type="checkbox"]:checked');
+                checkboxes.forEach(checkbox => 
+                {
+                    const value = checkbox.value;
+                    dataTable = dataTable.filter(item => item !== value);
+                });
+                show();
+            }
         });
     </script>
 </head>
 <body>
-    <form>
-        <input type="text" id="data" name="data">
-        <button id="submit" name="submit" value="add">Add</button>
-    </form>
+    <section class="container">
+        <h1>TO DO LIST</h1>
+        <form>
+            <input type="text" id="data" name="data">
+            <button id="submit" name="submit" value="add">Add</button>
+            <button id="delete" name="delete" value="delete">Delete</button>
+        </form>
 
-    <section>
-        <ul id="dataList">
-        </ul>
+        <section>
+            <ul id="dataList">
+            </ul>
+        </section>
     </section>
 </body>
 </html>
 
 <style>
-    li
+    body 
+    {
+        background-color: rgb(242, 213, 218);
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container 
+    {
+        text-align: center;
+        width: 100%;
+    }
+
+    section
+    {
+        margin-top: 2vh;
+    }
+
+    ul 
+    {
+        width: 35%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+        background-color: rgba(245, 245, 245, 0.683);
+    }
+
+    li 
     {
         list-style-type: none;
+        color: rgb(234, 188, 219);
+    }
+
+    h1 
+    {
+        color: rgb(188, 115, 127);
     }
 </style>
