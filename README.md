@@ -126,7 +126,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTACT -->
 ## Contact
 
-E-MAIL: b.kinga@interia.pl
+e-mail: b.kinga@interia.pl
 
 Project Link: [https://github.com/noiceya/internship](https://github.com/noiceya/internship)
 
