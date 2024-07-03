@@ -1,0 +1,17 @@
+
+.counter-design {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1em;
+
+    height: 3em;
+    width: 7.5em;
+
+    color: grey;
+    border: black 0.2em solid;
+    
+}
