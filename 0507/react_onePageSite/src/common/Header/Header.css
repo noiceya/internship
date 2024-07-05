@@ -14,3 +14,8 @@
 img{
     height: 5vh;
 }
+
+.logReg
+{
+    display: flex;
+}

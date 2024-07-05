@@ -1,12 +1,31 @@
-
 .home-design {
-
-    height: 82vh;
-    width: 100vw;
-
+    height: 100%;
+    width: 99vw;
     background-color: rgb(90, 121, 101);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    min-height: 79.5vh;
+  }
+  
+  .movie-item {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

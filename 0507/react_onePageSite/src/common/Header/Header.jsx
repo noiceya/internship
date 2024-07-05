@@ -34,15 +34,15 @@ function Header() {
       <Surfer path={"/"} destiny={"Home"} />
 
       {state.auth.token === "" ? (
-        <div>
+        <div class="logReg">
           <Surfer path={"/login"} destiny={"Login"} />
           <Surfer path={"/register"} destiny={"Register"} />
         </div>
       ) : (
-        <div>
+        <div class="logReg">
           <Surfer path={"/profile"} destiny={decodedName} />
           <div onClick={()=>SetAuth("token", "")}>
-            <Surfer path={"/"} destiny={"log out"} />
+            <Surfer path={"/"} destiny={"Log out"} />
           </div>
         </div>
       )}
