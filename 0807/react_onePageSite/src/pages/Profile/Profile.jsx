@@ -5,7 +5,7 @@ function Profile () {
 
     return (
         <div className="profile-design">
-             Here is the profile page.
+            I am profile, can you believe it?
         </div>
     )
 }

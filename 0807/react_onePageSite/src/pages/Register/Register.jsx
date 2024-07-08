@@ -5,7 +5,7 @@ function Register () {
 
     return (
         <div className="register-design">
-            Here is the register page.
+            I am register, can you believe it?
         </div>
     )
 }

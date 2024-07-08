@@ -4,67 +4,77 @@ import { myContext } from "../../app/context";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
+//React Bootstrap
+import { Container, Row, Col } from "react-bootstrap";
+import { CCard } from "../../common/CCard/CCard";
+
 function Home() {
   const [movies, setMovies] = useState([]);
-  const {state, SetAuth} = useContext(myContext)
-  const navigate = useNavigate()
+  const { state, SetAuth } = useContext(myContext);
+  const navigate = useNavigate();
+
+  const getMovies = async () => {
+    bringMovies()
+      .then((res) => {
+        setMovies(res.results);
+      })
+      .catch((error) => console.log(error));
+  };
 
   useEffect(() => {
     if (movies.length === 0) {
-      const getMovies = async () => {
-        bringMovies()
-          .then((res) => {
-            setMovies(res.results);
-          })
-          .catch((error) => console.log(error));
-      };
-        getMovies();
+      getMovies();
     }
 
     console.log(movies);
   }, [movies]);
 
-  useEffect(()=>{
+  useEffect(() => {
     //The trick here consists in the fact that we are following the state with the useEffect,
     //so every time we change the state we alter the movies data hook, not the state hook.
 
-    if(state !== ""){
-
+    if (state.global.search !== "") {
       const bringSearchedMovies = async () => {
-
         searchMovieCriteria(state.global.search)
-          .then(res => {
-            setMovies(res.results)
+          .then((res) => {
+            setMovies(res.results);
           })
-          .catch(error => console.log(error))
+          .catch((error) => console.log(error));
+      };
+      const bring = setTimeout(() => {
+        bringSearchedMovies();
+      }, 275);
 
-      }
-
-      bringSearchedMovies()
+      return () => clearTimeout(bring);
+    } else if (state.global.search === "") {
+      getMovies();
     }
-
-  }, [state])
+  }, [state]);
 
   const selectMovie = (movie) => {
-    SetAuth("movie", movie)
-    navigate("/moviedetail")
-  }
+    SetAuth("movie", movie);
+    navigate("/moviedetail");
+  };
 
   return (
     <div className="home-design">
       {movies.length > 0 ? (
-        movies.map((movie) => (
-          <div key={movie.id} className="movie-item" onClick={() => selectMovie(movie)}>
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-              alt={movie.title}
-              className="movie-poster"
-            />
-            <div className="movie-title">{movie.title}</div>
-          </div>
-        ))
+        //I have got the movies
+        <Container>
+          <Row>
+            {movies.map((movie) => {
+              return (
+                <Col sm={12} md={6} lg={4} xl={3} key={movie.id}>
+                  <div onClick={() => selectMovie(movie)}>
+                    <CCard movie={movie} />
+                  </div>
+                </Col>
+              );
+            })}
+          </Row>
+        </Container>
       ) : (
-        <div>Loading...</div>
+        <div>LOADING.......</div>
       )}
     </div>
   );

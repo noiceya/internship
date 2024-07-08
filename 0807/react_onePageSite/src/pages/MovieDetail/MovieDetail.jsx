@@ -25,7 +25,8 @@ function MovieDetail() {
         <p><b>Average note</b><br />{vote_average}</p>
         <p id="votes"><b>Votes</b><br />{vote_count}</p>
       </div>
-      <img id="main"
+      <img
+        id="main"
         src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
         alt={title}
         className="movie-poster"
