@@ -4,9 +4,33 @@
     height: 82vh;
     width: 100vw;
 
-    background-color: beige;
+    background-color: rgb(90, 121, 101);
 
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10vw;
+    color: rgba(10, 20, 13, 0.563);
+}
+
+.info
+{
+    height: 70vh;
+    text-align: top;
+}
+
+#main
+{
+    height: 70vh;
+    width: auto;
+}
+
+#votes
+{
+    font-size: 0.8rem;
+}
+
+h1
+{
+    color: rgba(12, 23, 10, 0.787);
 }
