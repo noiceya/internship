@@ -1,31 +1,38 @@
-.home-design {
-    height: 100%;
-    width: 99vw;
-    background-color: rgb(90, 121, 101);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 10px;
-    min-height: 79.5vh;
-  }
-  
-  .movie-item {
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .movie-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .movie-poster {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+.home-design 
+{
+  width: 100vw;
+  padding: 20px;
+  background-color: rgb(90, 121, 101);
+}
+
+.card-container 
+{
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card-container > div
+{
+  height: 30vh;
+  overflow-y: scroll;
+}
+
+.ccard 
+{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.ccard:hover 
+{
+  transform: scale(1.05); 
+}
+
+#load
+{
+  height: 100vh;
+}

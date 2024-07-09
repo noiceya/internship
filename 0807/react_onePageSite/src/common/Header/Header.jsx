@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { myContext } from "../../app/context";
 import { jwtDecode } from "jwt-decode";
-import esmovia from "../../assets/esmovia.jpg";
+import esmovia from "../../assets/catImage.jpeg";
 import CInput from "../CInput/CInput";
 
 function Header() {
@@ -56,15 +56,15 @@ function Header() {
       <Surfer path={"/"} destiny={"Home"} />
 
       {state.global.token === "" ? (
-        <div>
+        <div className="logReg">
           <Surfer path={"/login"} destiny={"Login"} />
           <Surfer path={"/register"} destiny={"Register"} />
         </div>
       ) : (
-        <div>
+        <div className="logReg">
           <Surfer path={"/profile"} destiny={decodedName} />
           <div onClick={()=>SetAuth("token", "")}>
-            <Surfer path={"/"} destiny={"log out"} />
+            <Surfer path={"/"} destiny={"Log out"} />
           </div>
         </div>
       )}

@@ -30,9 +30,6 @@ function Home() {
   }, [movies]);
 
   useEffect(() => {
-    //The trick here consists in the fact that we are following the state with the useEffect,
-    //so every time we change the state we alter the movies data hook, not the state hook.
-
     if (state.global.search !== "") {
       const bringSearchedMovies = async () => {
         searchMovieCriteria(state.global.search)
@@ -65,8 +62,8 @@ function Home() {
             {movies.map((movie) => {
               return (
                 <Col sm={12} md={6} lg={4} xl={3} key={movie.id}>
-                  <div onClick={() => selectMovie(movie)}>
-                    <CCard movie={movie} />
+                  <div className="card-container" onClick={() => selectMovie(movie)}>
+                    <CCard className="ccard" movie={movie} />
                   </div>
                 </Col>
               );
@@ -74,7 +71,7 @@ function Home() {
           </Row>
         </Container>
       ) : (
-        <div>LOADING.......</div>
+        <div id="load">LOADING.......</div>
       )}
     </div>
   );

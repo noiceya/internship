@@ -1,29 +1,29 @@
-//Mantine
-import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 
-export const CCard = ({movie}) => {
+import { Card, Image, Text, Badge, Group } from "@mantine/core";
+
+export const CCard = ({ movie }) => {
+  const imageUrl = movie.poster_path
+    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+    : "https://via.placeholder.com/500x750?text=No+Image";
+
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section>
         <Image
-          src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
+          src={imageUrl}
           height={160}
-          alt="Norway"
+          alt={movie.title}
         />
       </Card.Section>
 
-      <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500}>{movie.title}</Text>
+      <Group direction="column" spacing="xs" mt="md" mb="xs">
         <Badge color="pink">{movie.original_title}</Badge>
+        <Text fw={500}>{movie.title}</Text>
       </Group>
 
       <Text size="sm" c="dimmed">
         {movie.overview}
       </Text>
-
-      <Button color="blue" fullWidth mt="md" radius="md">
-        Book classic tour now
-      </Button>
     </Card>
   );
 };

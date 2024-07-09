@@ -17,13 +17,15 @@
     width: 12em;
 
     border-radius: 0.5em;
-    background-color: crimson;
+    background-color: rgba(38, 70, 48, 0.71);
     color: white;
     transition: 1s;
     cursor: pointer;
+    font-weight:bolder;
+    padding: 1em;
 }
 
 .login-button-design:hover {
     transition: 1s;
-    background-color: darkred;
+    background-color: rgb(38,70, 48);
 }
