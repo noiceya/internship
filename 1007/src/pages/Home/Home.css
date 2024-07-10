@@ -1,0 +1,48 @@
+body 
+{
+    width: 100%;
+}
+
+#root
+{
+    width: 100%;
+}
+
+.container 
+{
+    margin: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.card 
+{
+    width: 20vh;
+    text-align: center;
+}
+
+.card:hover 
+{
+    transform: scale(1.05);
+}
+
+.card-img-top 
+{
+}
+
+.card-body 
+{
+}
+
+.card-text 
+{
+}
+
+
+.card-title 
+{
+
+}
+  
